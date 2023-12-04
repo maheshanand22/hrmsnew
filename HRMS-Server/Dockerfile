@@ -1,3 +1,10 @@
+FROM busybox
+# Copy your script into the docker image
+ADD /path/to/your/script.sh /usr/local/bin/script.sh
+
+# Run your script
+CMD /usr/local/bin/script.sh
+
 FROM python:3.8-slim
 RUN apt-get update && apt-get install -y build-essential
 RUN apt-get install -y libpq-dev
