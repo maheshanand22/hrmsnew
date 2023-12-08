@@ -11,6 +11,22 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 }
 
 }
+
+
+  stage('Set Up Python') {
+            steps {
+                script {
+                    sh 'pyenv global 3.8.5'
+                    sh 'python -m venv venv'
+                    sh 'source venv/bin/activate'
+                    sh 'pip install --upgrade pip'
+                }
+            }
+        }
+
+
+
+
 }
 
 
