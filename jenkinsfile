@@ -13,24 +13,26 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 }
 
 
-  stage('Set Up Python') {
+  
+
+ stages {
+        stage('Set Up Python') {
             steps {
                 script {
+                    // Add the path to pyenv binaries to the PATH environment variable
+                    env.PATH = "/path/to/pyenv/bin:${env.PATH}"
+
+                    // Initialize pyenv
+                    sh 'eval "$(pyenv init --path)"'
+                    sh 'eval "$(pyenv virtualenv-init -)"'
+
+                    // Install and set Python version
+                    sh 'pyenv install 3.8.5'
                     sh 'pyenv global 3.8.5'
-                    sh 'python -m venv venv'
-                    sh 'source venv/bin/activate'
-                    sh 'pip install --upgrade pip'
                 }
             }
         }
 
-
-
-
-}
-
-
-}
 
 
 
