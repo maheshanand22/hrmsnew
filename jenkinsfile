@@ -15,7 +15,7 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 
   
 
- stages {
+ 
         stage('Set Up Python') {
             steps {
                 script {
@@ -38,4 +38,4 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 
 }
 }
-}
+
