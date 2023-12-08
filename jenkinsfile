@@ -37,7 +37,14 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
             }
         }
 
-
+ stage('Run Tests') {
+            steps {
+                script {
+                    // Run tests using Pipenv
+                    sh 'pipenv run pytest'
+                }
+            }
+        }
 
 
 
