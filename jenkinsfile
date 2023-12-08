@@ -51,18 +51,20 @@ sh 'docker build -t python .'
             }
         }
 }
-stage('Run Docker Container') {
-    steps {
-        script {
-            // Run Docker container
-            docker run --name my-python-container -d -p 8003:8000 -e EMAIL_HOST_USER=myuser python
-
+ stage('Run Docker Container') {
+            steps {
+                script {
+                    // Run Docker container with environment variables
+                    sh 'docker run --name my-python-container -d -p 8003:8000 -e EMAIL_HOST_USER=myuser -e OTHER_VARIABLE=value python'
+                }
+            }
+        }
            
 
             
-        }
-    }
-}
+        
+    
+
 
 
 
