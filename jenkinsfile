@@ -46,7 +46,14 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
             }
         }
 
-
+ stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image
+                    sh 'docker build -t python .'
+                }
+            }
+        }
 
 }
 }
