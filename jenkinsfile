@@ -60,6 +60,15 @@ stage('Run Docker Container') {
     }
 }
 
+stage('Cleanup') {
+    steps {
+        script {
+            // Stop and remove any existing containers
+            sh 'docker stop python-container || true'
+            sh 'docker rm python-container || true'
+        }
+    }
+}
 
 
 
