@@ -55,7 +55,7 @@ sh 'docker build -t python .'
             steps {
                 script {
                     // Run Docker container with environment variables
-                    sh 'docker run --name my-python-container -d -p 8003:8000 -e EMAIL_HOST_USER=myuser -e OTHER_VARIABLE=value python'
+                    sh 'docker run --name my-python-container -d -p 8000:8000 -e EMAIL_HOST_USER=myuser -e OTHER_VARIABLE=value python'
                 }
             }
         }
