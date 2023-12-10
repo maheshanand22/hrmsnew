@@ -1,7 +1,4 @@
-# Stage 1: Build Stage
-FROM busybox as builder
-COPY /path/to/your/script.sh /usr/local/bin/script.sh
-CMD ["/usr/local/bin/script.sh"]
+
 
 # Stage 2: Python Stage
 FROM python:3.8-slim
