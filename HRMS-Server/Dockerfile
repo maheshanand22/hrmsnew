@@ -9,7 +9,8 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy your script into the Docker image
-COPY /path/to/your/script.sh /usr/local/bin/script.sh
+COPY script.sh /usr/local/bin/script.sh
+
 
 # Copy the Python application files
 COPY requirements.txt /app/
