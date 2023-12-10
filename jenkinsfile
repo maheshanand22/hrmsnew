@@ -51,7 +51,7 @@ sh 'docker build -t python .'
             }
         }
 }
- stage('Run Docker Container') {
+ stage('deploy') {
             steps {
                 script {
                     // Run Docker container with environment variables
