@@ -1,28 +1,34 @@
 pipeline {
-agent any
-environment {
+agent any 
+
+    environment {
         PATH = "/path/to/pyenv/bin:${env.PATH}"
         SHELL = '/bin/bash' // or '/bin/sh' depending on your shell
     }
 
 
 
+
+
+
+
 stages{
 
-stage("intigration") {
 
+stage("intigration"){
 
 steps{
-
-
-
 git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
-}
 
 }
 
+}
 
-stage('install python depencies') {
+
+  
+
+ 
+           stage('install python depencies') {
             steps {
                 script {
                     // Install dependencies using Pipenv
@@ -31,32 +37,17 @@ stage('install python depencies') {
             }
         }
 
+ 
 
+ stage('Build Docker Image') {
+            steps {
+        dir("/var/lib/jenkins/workspace/python/HRMS-Server") {
 
-
-stage("build image") {
-
-steps {
-
-
-
-dir("/var/lib/jenkins/workspace/abdul autoamtion/HRMS-Server"){
-
-script {
- sh 'docker build -t abdul' .
-
-}
-
-}
-
-}
-}
-
-
-
-}
-
-
-
-
+                script {
+                    // Build Docker image
+                   
+sh 'docker build -t python .'
+                }
+            }
+        }
 }
