@@ -41,7 +41,8 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 
  stage('Build Docker Image') {
             steps {
-        dir("/var/lib/jenkins/workspace/python/HRMS-Server") {
+        dir('/var/lib/jenkins/workspace/abdul autoamtion/HRMS-Server')
+ {
 
                 script {
                     // Build Docker image
