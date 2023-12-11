@@ -39,7 +39,7 @@ script {
  sh 'docker build -t abdul' .
 
 
-}
+
 }
 
 }
