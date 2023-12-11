@@ -15,6 +15,21 @@ git branch: 'main', url: 'https://github.com/R807989/hrmsnew.git'
 }
 
 
+stage('install python depencies') {
+            steps {
+                script {
+                    // Install dependencies using Pipenv
+                    sh 'pipenv install --dev'
+                }
+            }
+        }
+
+
+
+
+
+
+
 
 }
 
