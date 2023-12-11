@@ -1,5 +1,12 @@
 pipeline {
 agent any
+environment {
+        PATH = "/path/to/pyenv/bin:${env.PATH}"
+        SHELL = '/bin/bash' // or '/bin/sh' depending on your shell
+    }
+
+
+
 stages{
 
 stage("intigration") {
