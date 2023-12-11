@@ -38,9 +38,9 @@ dir("/var/lib/jenkins/workspace/abdul autoamtion/HRMS-Server"){
 script {
  sh 'docker build -t abdul' .
 
+}
 
-
-
+}
 
 }
 }
