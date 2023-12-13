@@ -12,7 +12,7 @@ git branch: 'main', url: 'https://github.com/wajid8688/hrmsnew.git'
 stage("install dependcies"){
 steps{
 script{
-sh 'pipenv install --dev'"
+sh 'pipenv install --dev'
 }
 }
 }
