@@ -17,6 +17,17 @@ sh 'pipenv install --dev'
 }
 }
 
+stage("build image"){
+steps{
+dir( "/var/lib/jenkins/workspace/python pipe line/HRMS-Server"){
+script{
+sh "docker build -t abdul ."
+}
+
+}
+}
+}
+
 
 
 
