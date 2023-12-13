@@ -29,5 +29,5 @@ ENV email_host_user='nihar@marolix.com'
 ENV DEFAULT_FROM_EMAIL = 'mailto:nihar@marolix.com'
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
- 40m 12s
+ 
 
