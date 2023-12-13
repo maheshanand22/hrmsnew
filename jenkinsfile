@@ -28,7 +28,14 @@ sh "docker build -t abdul ."
 }
 }
 
-
+stage('deploy') {
+            steps {
+                script {
+                    
+                    sh 'docker run --name my-python-container -d -p 8000:8000 -e EMAIL_HOST_USER=myuser -e OTHER_VARIABLE=value python'
+                }
+            }
+        }
 
 
 
